@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Čolić - Data Scientist | Biostatistician | Computational Biologist and Bioinformatician | Cancer Genomics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; }
+        .hero { background: linear-gradient(135deg, #0d6efd, #6610f2); min-height: 100vh; display: flex; align-items: center; }
+        .navbar { box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .timeline { position: relative; max-width: 800px; margin: 0 auto; }
+        .timeline::after { content: ""; position: absolute; width: 6px; background-color: #0d6efd; top: 0; bottom: 0; left: 50%; margin-left: -3px; }
+        .timeline-item { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; }
+        .timeline-item.right { left: 0; }
+        .timeline-item.left { left: 50%; }
+        .timeline-item::after { content: ""; position: absolute; width: 25px; height: 25px; right: -17px; background-color: white; border: 4px solid #0d6efd; top: 15px; border-radius: 50%; z-index: 1; }
+        .timeline-item.left::after { left: -16px; }
+        .card { transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
+        .progress { height: 25px; border-radius: 12px; }
+        .accordion-button { font-weight: 600; }
+        .accordion-button:not(.collapsed) { background-color: #e7f3ff; color: #0d6efd; }
+        @media (max-width: 768px) { .timeline::after { left: 31px; } .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; left: 0 !important; } .timeline-item::before { left: 60px; border: medium solid white; border-width: 10px 10px 10px 0; border-color: transparent white transparent transparent; } .timeline-item::after { left: 15px; } }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="fas fa-dna me-2"></i>Daniel Čolić</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero text-white">
+        <div class="container text-center py-5">
+           <!-- <img src="profile.jpg" alt="Daniel Čolić" class="rounded-circle mb-4 shadow-lg" style="width: 200px; height: 200px; object-fit: cover;"> -->
+            <h1 class="display-3 fw-bold mb-3">Daniel Čolić</h1>
+            <h2 class="display-5 mb-4">Computational Biologist & Data Scientist</h2>
+            <p class="lead mb-4 px-4">PhD in Biomedicine | 5+ years building statistical models for biological and clinical data | Barcelona</p>
+            <div class="mb-4">
+                <a href="https://www.linkedin.com/in/daniel-colic-054915210" class="btn btn-light btn-lg me-3"><i class="fab fa-linkedin me-1"></i>LinkedIn</a>
+                <!-- <a href="CV_Daniel_Colic_03_2026.pdf" class="btn btn-outline-light btn-lg" download><!i class="fas fa-file-pdf me-1"></i>Download CV</a> -->
+            </div>
+            <!-- <p class="text-white-50">daniel.colic5@gmail.com</p> -->
+        </div>
+    </section>
+
+    <!-- Profile -->
+    <section id="profile" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5"><i class="fas fa-user-tie me-2"></i>Professional Profile</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow">
+                        <div class="card-body text-center p-5">
+                            <p class="lead text-dark">Computational Biologist and Data Scientist with a PhD in Biomedicine. Brings 5 years of experience building statistical models to extract insights from genomic, clinical, and other data types, supporting research and business decisions. Curious and organized, thrives on innovative projects, working independently or in collaborative teams.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5"><i class="fas fa-briefcase me-2"></i>Professional Experience</h2>
+            <div class="accordion" id="experienceAccordion">
+                <!-- PhD -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#phdCollapse">
+                            <i class="fas fa-microscope me-2 text-primary"></i>PhD Researcher<br><small class="text-muted"> IRB Barcelona, Genome Data Science Lab (09/2021 – 10/2025)</small>
+                        </button>
+                    </h2>
+                    <div id="phdCollapse" class="accordion-collapse collapse show" data-bs-parent="#experienceAccordion">
+                        <div class="accordion-body">
+                            <ul class="mb-0">
+                                <li>Analyzed genomic data from <strong>60,000 cancer patients</strong> across 20 cancer types to quantify driver mutations and selection patterns.</li>
+                                <li>Developed modular R framework with <strong>GLMs, Bayesian inference, autoencoders</strong>, improving driver detection in panel sequencing data.</li>
+                                <li>Extended framework for timing/conditional selection analyses across datasets (targeted panels/WES).</li>
+                                <li>Managed 4-year project end-to-end, delivering/defending PhD thesis <em>excellent cum laude</em> with <strong>50 advanced visualizations</strong>.</li>
+                                <li>Created reports/presentations for supervisors, collaborators, funders, evaluators, conferences.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Visiting Researcher -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#triesteCollapse">
+                            <i class="fas fa-plane me-2 text-success"></i>Visiting Researcher<br><small class="text-muted"> Universita di Trieste (08/2024 – 10/2024)</small>
+                        </button>
+                    </h2>
+                    <div id="triesteCollapse" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Collaborated on development of <strong>Bayesian models</strong> to infer cancer evolution and mutagenesis.</li>
+                                <li>Co-authored high-impact research paper on clinical impact of copy number alterations in cancer genes (<a href="https://doi.org/10.1101/2024.05.13.24307238" target="_blank">medRxiv preprint</a>).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Erasmus Trainee -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cicCollapse">
+                            <i class="fas fa-flask me-2 text-warning"></i>Erasmus Trainee<br><small class="text-muted"> CIC bioGUNE, Bilbao (09/2020 – 06/2021)</small>
+                        </button>
+                    </h2>
+                    <div id="cicCollapse" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><strong>Computational Chemistry Group (02/2021–06/2021)</strong>: Modeled prion proteins using 3D structure prediction (Rosetta).</li>
+                                <li><strong>Prion Lab (09/2020–12/2020)</strong>: Conducted prion experiments as neurodegenerative disease model.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Graduate Intern -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vetCollapse">
+                            <i class="fas fa-vials me-2 text-info"></i>Graduate Intern<br><small class="text-muted"> Croatian Veterinary Institute (08/2019 – 02/2020)</small>
+                        </button>
+                    </h2>
+                    <div id="vetCollapse" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+                        <div class="accordion-body">
+                            <p>Performed genetic material extraction, Sanger sequencing, genotyping, phylogeny of Rotavirus A (RVA) from 100 wild animal samples. Master\'s thesis resulted in <strong>two co-authored publications</strong>, each cited &gt;10 times.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Intern Clinic -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#clinicCollapse">
+                            <i class="fas fa-hospital me-2 text-danger"></i>Intern<br><small class="text-muted"> Clinic for Infectious Diseases Dr. Fran Mihaljević (02/2019 – 06/2019)</small>
+                        </button>
+                    </h2>
+                    <div id="clinicCollapse" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+                        <div class="accordion-body">
+                            <p>Conducted diagnostics and genotyping of HIV & Hepatitis A from blood samples in the diagnostics department.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5"><i class="fas fa-tools me-2"></i>Core Technical Skills</h2>
+        <div class="row g-4">
+            <!-- Programming & Data Science -->
+            <div class="col-lg-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fab fa-r-project me-2"></i>Programming & Data Science</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6><strong>Languages:</strong></h6>
+                        <ul class="mb-3">
+                            <li>R, Python, Linux, SQL</li>
+                        </ul>
+                        <h6><strong>Libraries:</strong></h6>
+                        <ul class="mb-3">
+                            <li><strong>R:</strong> dplyr, data.table, stats, arm, Bioconductor</li>
+                            <li><strong>Python:</strong> Pandas, NumPy, scikit-learn, TensorFlow/PyTorch (autoencoders)</li>
+                        </ul>
+                        <h6><strong>Visualization:</strong></h6>
+                        <ul class="mb-3">
+                            <li>ggplot2, R Shiny, matplotlib</li>
+                        </ul>
+                        <h6><strong>Tools:</strong></h6>
+                        <ul>
+                            <li>GitHub, Generative AI (GPT, Gemini, Copilot), MS Excel, PowerPoint, Word</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Machine Learning & Statistics -->
+            <div class="col-lg-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-warning text-dark">
+                        <h5 class="mb-0"><i class="fas fa-brain me-2"></i>Machine Learning & Statistics</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6><strong>Modeling:</strong></h6>
+                        <ul class="mb-3">
+                            <li>Generalized Linear Models (GLMs), Clustering</li>
+                            <li>PCA, SVM, Random Forest, t-SNE, UMAP</li>
+                            <li>Neural Networks (Autoencoders)</li>
+                        </ul>
+                        <h6><strong>Methods:</strong></h6>
+                        <ul>
+                            <li>Bayesian inference, Hypothesis testing</li>
+                            <li>Parametric & Nonparametric tests</li>
+                            <li>Model Evaluation & Validation, Predictive Modeling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row g-4 mt-4">
+            <!-- Bioinformatics & Genomics -->
+            <div class="col-lg-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0"><i class="fas fa-dna me-2"></i>Bioinformatics & Genomics</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h6><strong>Cancer Genomics:</strong></h6>
+                                <ul class="mb-0">
+                                    <li>NGS data</li>
+                                    <li>Germline/somatic mutations</li>
+                                    <li>Driver/passenger mutations</li>
+                                    <li>dN/dS selection, Phylogeny</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h6><strong>Genomic Analysis:</strong></h6>
+                                <ul class="mb-0">
+                                    <li>BAM files, QC, alignment</li>
+                                    <li>Mutation calling/annotation</li>
+                                    <li>Gene Ontology (GO)</li>
+                                    <li>Differential expression</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h6><strong>Clinical & Tools:</strong></h6>
+                                <ul class="mb-0">
+                                    <li>Survival analysis (Cox regression)</li>
+                                    <li>Ensembl, COSMIC, BLAST</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Languages -->
+            <div class="col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0"><i class="fas fa-globe me-2"></i>Languages</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Croatian</span><strong>Native</strong>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>English</span><strong>C1</strong>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Spanish</span><strong>C1</strong>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Catalan</span><strong>B1</strong>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span>German/Italian</span><strong>A2</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Publications -->
+    <section id="publications" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5"><i class="fas fa-file-alt me-2"></i>Publications & Presentations</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h6 class="card-title"><strong>Calonaci et al. (2025)</strong></h6>
+                            <p class="card-text">Gene mutant dosage determines prognosis and metastatic tropism in 60,000 clinical cancer samples.</p>
+                            <a href="https://doi.org/10.1101/2024.05.13.24307238" class="btn btn-primary btn-sm" target="_blank">medRxiv</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h6 class="card-title"><strong>Brnić, Čolić et al. (2022)</strong> <em>Co-first author</em></h6>
+                            <p class="card-text">Rotavirus A in Domestic Pigs and Wild Boars: High Genetic Diversity and Interspecies Transmission. <em>Viruses</em>.</p>
+                            <a href="https://doi.org/10.3390/v14092028" class="btn btn-success btn-sm" target="_blank">DOI</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h6 class="card-title"><strong>Čolić et al. (2021)</strong></h6>
+                            <p class="card-text">A Remarkable Genetic Diversity of Rotavirus A Circulating in Red Fox Population in Croatia. <em>Pathogens</em>.</p>
+                            <a href="https://doi.org/10.3390/pathogens10040485" class="btn btn-success btn-sm" target="_blank">DOI</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h6 class="card-title">Poster Presentation – ECCB 2024</h6>
+                            <p class="card-text">Čolić, D., Supek, F. "Time-associated changes in positive selection on cancer driver genes". European Conference on Computational Biology, Turku, Finland.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Leadership -->
+    <section id="awards" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5"><i class="fas fa-trophy me-2"></i>Awards & Leadership</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card text-center shadow">
+                        <div class="card-body">
+                            <i class="fas fa-crown fa-3x text-warning mb-3"></i>
+                            <h5>La Caixa Inphinit Fellowship</h5>
+                            <p class="text-muted">2021–2024 | Ranked <strong>top 5% international applicants</strong></p>
+                            <a href="https://becarios.fundacionlacaixa.org/en/daniel-colic--B005570" target="_blank">View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card text-center shadow">
+                        <div class="card-body">
+                            <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                            <h5>Leadership & Outreach</h5>
+                            <ul class="list-unstyled text-start mt-3">
+                                <li>Co-organized Bioethics symposium (secured funding, logistics)</li>
+                                <li>Musical conductor, So-Do El Sistema youth orchestra</li>
+                                <li>University outreach: Night of Biology, In the Company of Microbes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="lead"><strong>3 countries:</strong> Croatia, Spain 🇪🇸, Italy | Cross-cultural collaboration specialist</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5"><i class="fas fa-envelope-open me-2"></i>Get In Touch</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-body p-5">
+                        <div class="row text-center text-lg-start mb-4">
+                        </div>
+                        <hr>
+                        <form action="https://formspree.io/f/xreydabj" method="POST">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" name="_subject" class="form-control" placeholder="Subject (optional)">
+                            </div>
+                            <div class="mb-3">
+                                <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <div class="d-none">
+                                <input type="text" name="_gotcha" value="" />
+                                <input type="hidden" name="_next" value="https://dcolic5.github.io/personal_page/#thanks" />
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </form>
+                        <div id="thanks" class="alert alert-success mt-3" style="display: none;">
+                            <i class="fas fa-check-circle me-2"></i>Thank you! I\'ll reply soon.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2026 Daniel Colic <a href="#home" class="text-white">Back to top</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll("a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", e => {
+                e.preventDefault();
+                document.querySelector(anchor.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+            });
+        });
+
+        // Navbar shrink on scroll
+        window.addEventListener("scroll", () => {
+            document.querySelector(".navbar").classList.toggle("shadow-lg", window.scrollY > 50);
+        });
+
+        // Auto-collapse other accordions when one opens
+        document.querySelectorAll(".accordion-collapse").forEach(collapse => {
+            collapse.addEventListener("shown.bs.collapse", () => {
+                const accordion = collapse.closest(".accordion");
+                accordion.querySelectorAll(".accordion-collapse.collapse.show").forEach(c => {
+                    if (c.id !== collapse.id) new bootstrap.Collapse(c, {toggle: false});
+                });
+            });
+        });
+    </script>
+</body>
+</html>
